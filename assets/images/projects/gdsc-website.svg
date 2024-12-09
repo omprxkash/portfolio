@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0,0 7,2.5 0,5" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" fill="#f6f6f6"/>
+  <rect x="0"   y="0" width="197" height="360" fill="#e8f4ff"/>
+  <rect x="201" y="0" width="197" height="360" fill="#fff0e8"/>
+  <rect x="401" y="0" width="197" height="360" fill="#e8ffe8"/>
+  <rect x="601" y="0" width="199" height="360" fill="#fff8e8"/>
+  <line x1="199" y1="0" x2="199" y2="360" stroke="#ddd" stroke-width="2"/>
+  <line x1="399" y1="0" x2="399" y2="360" stroke="#ddd" stroke-width="2"/>
+  <line x1="599" y1="0" x2="599" y2="360" stroke="#ddd" stroke-width="2"/>
+  <rect x="7" y="7" width="184" height="30" rx="5" fill="#4285f4"/>
+  <text x="99" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Design</text>
+  <rect x="207" y="7" width="184" height="30" rx="5" fill="#ea4335"/>
+  <text x="299" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">React Components</text>
+  <rect x="407" y="7" width="184" height="30" rx="5" fill="#34a853"/>
+  <text x="499" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Vite Build</text>
+  <rect x="607" y="7" width="184" height="30" rx="5" fill="#fbbc04"/>
+  <text x="699" y="27" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Deploy</text>
+  <!-- Wireframe design -->
+  <rect x="28" y="60" width="140" height="110" rx="4" fill="white" stroke="#4285f4" stroke-width="1.5"/>
+  <rect x="28" y="60" width="140" height="22" rx="4" fill="#4285f4" opacity="0.2"/>
+  <rect x="36" y="67" width="50" height="8" rx="2" fill="#4285f4" opacity="0.5"/>
+  <rect x="110" y="67" width="25" height="8" rx="2" fill="#4285f4" opacity="0.4"/>
+  <rect x="140" y="67" width="20" height="8" rx="2" fill="#ea4335" opacity="0.4"/>
+  <rect x="36" y="92" width="120" height="35" rx="3" fill="#e8f0fe"/>
+  <text x="96" y="113" text-anchor="middle" fill="#4285f4" font-size="10" font-weight="bold">Hero Section</text>
+  <rect x="36" y="134" width="55" height="28" rx="3" fill="#f0f0f0"/>
+  <rect x="98" y="134" width="55" height="28" rx="3" fill="#f0f0f0"/>
+  <text x="99" y="200" text-anchor="middle" fill="#888" font-size="9">Figma wireframes</text>
+  <text x="99" y="214" text-anchor="middle" fill="#888" font-size="9">GDSC brand colors</text>
+  <!-- React component tree -->
+  <text x="299" y="58" text-anchor="middle" fill="#ea4335" font-size="10" font-weight="bold">Component Tree</text>
+  <rect x="267" y="65" width="65" height="18" rx="3" fill="#ea4335" opacity="0.15" stroke="#ea4335" stroke-width="1"/>
+  <text x="299" y="78" text-anchor="middle" fill="#ea4335" font-size="9">App.jsx</text>
+  <line x1="284" y1="83" x2="248" y2="100" stroke="#ea4335" stroke-width="1.2" opacity="0.7"/>
+  <line x1="299" y1="83" x2="299" y2="100" stroke="#ea4335" stroke-width="1.2" opacity="0.7"/>
+  <line x1="314" y1="83" x2="350" y2="100" stroke="#ea4335" stroke-width="1.2" opacity="0.7"/>
+  <rect x="220" y="100" width="55" height="16" rx="3" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="1"/>
+  <text x="247" y="112" text-anchor="middle" fill="#ea4335" font-size="8">Navbar</text>
+  <rect x="272" y="100" width="54" height="16" rx="3" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="1"/>
+  <text x="299" y="112" text-anchor="middle" fill="#ea4335" font-size="8">Hero</text>
+  <rect x="323" y="100" width="54" height="16" rx="3" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="1"/>
+  <text x="350" y="112" text-anchor="middle" fill="#ea4335" font-size="8">Events</text>
+  <line x1="247" y1="116" x2="236" y2="132" stroke="#ea4335" stroke-width="1.2" opacity="0.6"/>
+  <line x1="247" y1="116" x2="258" y2="132" stroke="#ea4335" stroke-width="1.2" opacity="0.6"/>
+  <rect x="221" y="132" width="28" height="14" rx="2" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="1"/>
+  <text x="235" y="143" text-anchor="middle" fill="#ea4335" font-size="7">Logo</text>
+  <rect x="253" y="132" width="28" height="14" rx="2" fill="#ea4335" opacity="0.1" stroke="#ea4335" stroke-width="1"/>
+  <text x="267" y="143" text-anchor="middle" fill="#ea4335" font-size="7">Links</text>
+  <text x="299" y="180" text-anchor="middle" fill="#666" font-size="9">React 18 · TypeScript</text>
+  <text x="299" y="194" text-anchor="middle" fill="#666" font-size="9">Tailwind CSS</text>
+  <rect x="221" y="210" width="155" height="38" rx="5" fill="white" stroke="#ea4335" stroke-width="1.5"/>
+  <text x="299" y="229" text-anchor="middle" fill="#ea4335" font-size="11" font-weight="bold">React Router v6</text>
+  <text x="299" y="244" text-anchor="middle" fill="#777" font-size="9">SPA · Dynamic pages</text>
+  <!-- Vite build output -->
+  <text x="499" y="58" text-anchor="middle" fill="#34a853" font-size="10" font-weight="bold">dist/ Output</text>
+  <rect x="416" y="68" width="160" height="20" rx="3" fill="#f0fdf4" stroke="#34a853" stroke-width="1"/>
+  <text x="424" y="82" fill="#34a853" font-size="9">📁 assets/</text>
+  <rect x="424" y="92" width="148" height="16" rx="2" fill="#f8fff8" stroke="#aaa" stroke-width="0.8"/>
+  <text x="432" y="103" fill="#555" font-size="8">index-abc123.js  (42kb)</text>
+  <rect x="424" y="112" width="148" height="16" rx="2" fill="#f8fff8" stroke="#aaa" stroke-width="0.8"/>
+  <text x="432" y="123" fill="#555" font-size="8">style-xyz789.css (12kb)</text>
+  <rect x="416" y="133" width="160" height="20" rx="3" fill="#f0fdf4" stroke="#34a853" stroke-width="1"/>
+  <text x="424" y="147" fill="#34a853" font-size="9">index.html</text>
+  <text x="499" y="175" text-anchor="middle" fill="#555" font-size="9">Tree-shaking · Code split</text>
+  <text x="499" y="191" text-anchor="middle" fill="#555" font-size="9">Gzip: 18kb / 55kb raw</text>
+  <rect x="416" y="210" width="160" height="38" rx="5" fill="white" stroke="#34a853" stroke-width="1.5"/>
+  <text x="496" y="230" text-anchor="middle" fill="#34a853" font-size="11" font-weight="bold">Vite 5.0</text>
+  <text x="496" y="244" text-anchor="middle" fill="#777" font-size="9">HMR · ESBuild</text>
+  <!-- GitHub Pages deploy -->
+  <text x="699" y="62" text-anchor="middle" fill="#e8a000" font-size="10" font-weight="bold">GitHub Pages</text>
+  <rect x="624" y="73" width="148" height="48" rx="5" fill="white" stroke="#fbbc04" stroke-width="1.5"/>
+  <text x="698" y="92" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">gh-pages branch</text>
+  <text x="698" y="108" text-anchor="middle" fill="#555" font-size="9">gdsc.iiitk.ac.in</text>
+  <line x1="609" y1="135" x2="789" y2="135" stroke="#eee"/>
+  <text x="699" y="152" text-anchor="middle" fill="#34a853" font-size="10" font-weight="bold">CI / CD</text>
+  <rect x="624" y="160" width="148" height="40" rx="4" fill="white" stroke="#aaa"/>
+  <text x="698" y="178" text-anchor="middle" fill="#333" font-size="9">GitHub Actions</text>
+  <text x="698" y="193" text-anchor="middle" fill="#555" font-size="8">Push → Build → Deploy</text>
+  <line x1="609" y1="216" x2="789" y2="216" stroke="#eee"/>
+  <text x="699" y="232" text-anchor="middle" fill="#4285f4" font-size="10">Lighthouse: 96/100</text>
+  <text x="699" y="250" text-anchor="middle" fill="#666" font-size="9">PWA · 100 members</text>
+  <line x1="189" y1="145" x2="213" y2="145" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="389" y1="155" x2="414" y2="155" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="589" y1="155" x2="614" y2="115" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="0" y="362" width="800" height="38" fill="#2d3748"/>
+  <text x="400" y="386" text-anchor="middle" fill="#ccc" font-size="11">GDSC IIITK Website  ·  React 18 · TypeScript · Tailwind CSS · Vite · GitHub Pages</text>
+</svg>

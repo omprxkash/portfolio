@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0,0 7,2.5 0,5" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" fill="#f6f6f6"/>
+  <rect x="0"   y="0" width="197" height="360" fill="#ffe8de"/>
+  <rect x="201" y="0" width="197" height="360" fill="#e2f4ea"/>
+  <rect x="401" y="0" width="197" height="360" fill="#dce8fc"/>
+  <rect x="601" y="0" width="199" height="360" fill="#fdfae0"/>
+  <line x1="199" y1="0" x2="199" y2="360" stroke="#ddd" stroke-width="2"/>
+  <line x1="399" y1="0" x2="399" y2="360" stroke="#ddd" stroke-width="2"/>
+  <line x1="599" y1="0" x2="599" y2="360" stroke="#ddd" stroke-width="2"/>
+  <rect x="7" y="7" width="184" height="30" rx="5" fill="#d95c3a"/>
+  <text x="99" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Input Document</text>
+  <rect x="207" y="7" width="184" height="30" rx="5" fill="#2d9e5e"/>
+  <text x="299" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">OCR Engine</text>
+  <rect x="407" y="7" width="184" height="30" rx="5" fill="#2c65c0"/>
+  <text x="499" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">LLM Correction</text>
+  <rect x="607" y="7" width="184" height="30" rx="5" fill="#b89200"/>
+  <text x="699" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Structured Output</text>
+  <rect x="35" y="60" width="125" height="160" rx="4" fill="white" stroke="#ccc"/>
+  <rect x="50" y="80"  width="95" height="7" rx="3" fill="#ccc"/>
+  <rect x="50" y="96"  width="85" height="7" rx="3" fill="#ccc"/>
+  <rect x="50" y="112" width="95" height="7" rx="3" fill="#ccc"/>
+  <rect x="50" y="128" width="70" height="7" rx="3" fill="#ccc"/>
+  <rect x="50" y="144" width="90" height="7" rx="3" fill="#ccc"/>
+  <rect x="50" y="160" width="60" height="7" rx="3" fill="#ccc"/>
+  <rect x="50" y="176" width="80" height="7" rx="3" fill="#ccc"/>
+  <text x="97" y="248" text-anchor="middle" fill="#666" font-size="11">Scanned PDF / Image</text>
+  <text x="97" y="264" text-anchor="middle" fill="#999" font-size="10">noisy · low quality</text>
+  <rect x="216" y="60" width="170" height="52" rx="6" fill="white" stroke="#2d9e5e" stroke-width="2"/>
+  <text x="301" y="82" text-anchor="middle" fill="#2d9e5e" font-size="13" font-weight="bold">Tesseract OCR</text>
+  <text x="301" y="101" text-anchor="middle" fill="#777" font-size="10">LSTM Engine · v4.1</text>
+  <line x1="301" y1="116" x2="301" y2="146" stroke="#888" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="216" y="150" width="170" height="65" rx="5" fill="white" stroke="#ddd"/>
+  <text x="301" y="170" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Raw Extracted Text</text>
+  <rect x="228" y="179" width="146" height="6" rx="3" fill="#e88" opacity="0.7"/>
+  <rect x="228" y="191" width="130" height="6" rx="3" fill="#e88" opacity="0.7"/>
+  <rect x="228" y="203" width="140" height="6" rx="3" fill="#e88" opacity="0.7"/>
+  <text x="301" y="242" text-anchor="middle" fill="#c00" font-size="10">⚠ OCR errors present</text>
+  <rect x="416" y="60" width="170" height="52" rx="6" fill="white" stroke="#2c65c0" stroke-width="2"/>
+  <text x="501" y="82" text-anchor="middle" fill="#2c65c0" font-size="13" font-weight="bold">GPT-4 / Claude</text>
+  <text x="501" y="101" text-anchor="middle" fill="#777" font-size="10">Context-aware correction</text>
+  <line x1="501" y1="116" x2="501" y2="146" stroke="#888" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="416" y="150" width="170" height="65" rx="5" fill="white" stroke="#ddd"/>
+  <text x="501" y="170" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">Corrected Text</text>
+  <rect x="428" y="179" width="146" height="6" rx="3" fill="#88c" opacity="0.7"/>
+  <rect x="428" y="191" width="130" height="6" rx="3" fill="#88c" opacity="0.7"/>
+  <rect x="428" y="203" width="140" height="6" rx="3" fill="#88c" opacity="0.7"/>
+  <text x="501" y="242" text-anchor="middle" fill="#2d9e5e" font-size="10">✓ Errors resolved</text>
+  <rect x="616" y="60" width="174" height="210" rx="6" fill="white" stroke="#c8a000" stroke-width="2"/>
+  <text x="703" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">Structured Output</text>
+  <line x1="620" y1="95" x2="786" y2="95" stroke="#eee"/>
+  <rect x="630" y="106" width="148" height="6" rx="3" fill="#555"/>
+  <rect x="630" y="119" width="132" height="6" rx="3" fill="#555"/>
+  <rect x="630" y="132" width="148" height="6" rx="3" fill="#555"/>
+  <rect x="630" y="145" width="110" height="6" rx="3" fill="#555"/>
+  <rect x="630" y="158" width="138" height="6" rx="3" fill="#555"/>
+  <line x1="620" y1="175" x2="786" y2="175" stroke="#eee"/>
+  <text x="703" y="196" text-anchor="middle" fill="#2d9e5e" font-size="11">✓ Accuracy: 94.7%</text>
+  <text x="703" y="214" text-anchor="middle" fill="#2d9e5e" font-size="11">✓ WER reduced 87%</text>
+  <text x="703" y="238" text-anchor="middle" fill="#999" font-size="10">Export: JSON / Markdown</text>
+  <line x1="164" y1="165" x2="213" y2="165" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="389" y1="185" x2="414" y2="185" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="589" y1="185" x2="614" y2="185" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="0" y="362" width="800" height="38" fill="#2d3748"/>
+  <text x="400" y="386" text-anchor="middle" fill="#ccc" font-size="11">LLM-Aided OCR  ·  Python · OpenAI API · Tesseract · post-OCR correction pipeline</text>
+</svg>
