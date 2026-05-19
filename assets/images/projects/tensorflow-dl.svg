@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c0a00"/>
+      <stop offset="50%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <!-- Neural network diagram -->
+  <!-- Input layer (4 nodes) -->
+  <circle cx="130" cy="130" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
+  <circle cx="130" cy="190" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
+  <circle cx="130" cy="250" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
+  <circle cx="130" cy="310" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
+  <text x="130" y="360" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.5)">Input</text>
+  <!-- Hidden layer 1 (5 nodes) -->
+  <circle cx="270" cy="110" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="270" cy="170" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="270" cy="230" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="270" cy="290" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="270" cy="350" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <text x="270" y="378" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.4)">Dense 256</text>
+  <!-- Hidden layer 2 (5 nodes) -->
+  <circle cx="410" cy="110" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="410" cy="170" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="410" cy="230" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="410" cy="290" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="410" cy="350" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <text x="410" y="378" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.4)">Dense 128</text>
+  <!-- Hidden layer 3 (4 nodes) -->
+  <circle cx="550" cy="130" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="550" cy="195" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="550" cy="260" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <circle cx="550" cy="325" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <text x="550" y="360" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.4)">Dense 64</text>
+  <!-- Output layer (2 nodes) -->
+  <circle cx="680" cy="185" r="18" fill="rgba(249,115,22,0.18)" stroke="#f97316" stroke-width="2.5"/>
+  <circle cx="680" cy="265" r="18" fill="rgba(249,115,22,0.18)" stroke="#f97316" stroke-width="2.5"/>
+  <text x="680" y="315" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.6)">Softmax</text>
+  <!-- Connections (input → h1) -->
+  <line x1="146" y1="130" x2="254" y2="110" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="146" y1="130" x2="254" y2="170" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="146" y1="130" x2="254" y2="230" stroke="rgba(249,115,22,0.08)" stroke-width="1"/>
+  <line x1="146" y1="130" x2="254" y2="290" stroke="rgba(249,115,22,0.08)" stroke-width="1"/>
+  <line x1="146" y1="130" x2="254" y2="350" stroke="rgba(249,115,22,0.06)" stroke-width="1"/>
+  <line x1="146" y1="190" x2="254" y2="110" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="146" y1="190" x2="254" y2="170" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="146" y1="250" x2="254" y2="230" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="146" y1="250" x2="254" y2="290" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="146" y1="310" x2="254" y2="350" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <!-- h1 → h2 (selected) -->
+  <line x1="286" y1="170" x2="394" y2="170" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+  <line x1="286" y1="230" x2="394" y2="230" stroke="rgba(249,115,22,0.2)" stroke-width="1.5"/>
+  <line x1="286" y1="110" x2="394" y2="110" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="286" y1="290" x2="394" y2="290" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="286" y1="350" x2="394" y2="350" stroke="rgba(249,115,22,0.1)" stroke-width="1"/>
+  <!-- h2 → h3 -->
+  <line x1="426" y1="170" x2="534" y2="195" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+  <line x1="426" y1="230" x2="534" y2="260" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+  <line x1="426" y1="110" x2="534" y2="130" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <line x1="426" y1="290" x2="534" y2="325" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+  <!-- h3 → output -->
+  <line x1="566" y1="130" x2="662" y2="185" stroke="rgba(249,115,22,0.2)" stroke-width="1.5"/>
+  <line x1="566" y1="195" x2="662" y2="185" stroke="rgba(249,115,22,0.25)" stroke-width="2"/>
+  <line x1="566" y1="260" x2="662" y2="265" stroke="rgba(249,115,22,0.25)" stroke-width="2"/>
+  <line x1="566" y1="325" x2="662" y2="265" stroke="rgba(249,115,22,0.2)" stroke-width="1.5"/>
+  <!-- TF label top right -->
+  <rect x="620" y="55" width="145" height="55" rx="8" fill="rgba(0,0,0,0.2)" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+  <text x="692" y="78" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(249,115,22,0.5)">TensorFlow 2.x</text>
+  <text x="692" y="96" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="rgba(249,115,22,0.8)">GPU Accelerated</text>
+  <text x="400" y="372" text-anchor="middle" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.28)" letter-spacing="3">TENSORFLOW DEEP LEARNING</text>
+</svg>

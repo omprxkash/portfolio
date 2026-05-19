@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <!-- Browser frame -->
+  <rect x="100" y="60" width="600" height="270" rx="10" fill="rgba(0,0,0,0.35)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <!-- Browser chrome bar -->
+  <rect x="100" y="60" width="600" height="36" rx="10" fill="rgba(255,255,255,0.06)" stroke="none"/>
+  <rect x="100" y="84" width="600" height="12" rx="0" fill="rgba(0,0,0,0.1)"/>
+  <!-- Traffic lights -->
+  <circle cx="126" cy="78" r="6" fill="rgba(239,68,68,0.7)"/>
+  <circle cx="146" cy="78" r="6" fill="rgba(251,191,36,0.7)"/>
+  <circle cx="166" cy="78" r="6" fill="rgba(52,211,153,0.7)"/>
+  <!-- URL bar -->
+  <rect x="200" y="68" width="380" height="20" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="390" y="82" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">gdscvitchennai.web.app</text>
+  <!-- Nav bar in browser -->
+  <rect x="100" y="96" width="600" height="40" fill="rgba(15,23,42,0.8)"/>
+  <!-- Nav items -->
+  <text x="140" y="121" font-family="sans-serif" font-size="12" font-weight="bold" fill="rgba(255,255,255,0.9)">GDSC VIT</text>
+  <text x="460" y="121" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Events</text>
+  <text x="520" y="121" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Projects</text>
+  <text x="585" y="121" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Team</text>
+  <!-- Hero section -->
+  <rect x="100" y="136" width="600" height="130" fill="rgba(30,58,138,0.15)"/>
+  <text x="270" y="185" font-family="sans-serif" font-size="20" font-weight="bold" fill="rgba(255,255,255,0.85)">Developer Student</text>
+  <text x="270" y="208" font-family="sans-serif" font-size="20" font-weight="bold" fill="rgba(255,255,255,0.85)">Clubs — VIT Chennai</text>
+  <!-- Google colors accent -->
+  <rect x="270" y="220" width="16" height="16" rx="2" fill="#4285F4"/>
+  <rect x="292" y="220" width="16" height="16" rx="2" fill="#34A853"/>
+  <rect x="314" y="220" width="16" height="16" rx="2" fill="#FBBC04"/>
+  <rect x="336" y="220" width="16" height="16" rx="2" fill="#EA4335"/>
+  <!-- Content cards -->
+  <rect x="115" y="280" width="170" height="32" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="300" y="280" width="170" height="32" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="485" y="280" width="200" height="32" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Code snippets overlaid -->
+  <text x="120" y="298" font-family="monospace" font-size="9" fill="rgba(96,165,250,0.5)">const App = () =&gt; &#123;</text>
+  <text x="305" y="298" font-family="monospace" font-size="9" fill="rgba(52,211,153,0.5)">export default Router</text>
+  <text x="490" y="298" font-family="monospace" font-size="9" fill="rgba(251,146,60,0.5)">@tailwind components</text>
+  <text x="400" y="372" text-anchor="middle" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.28)" letter-spacing="3">GDSC VIT CHENNAI — WEBSITE</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c0a00"/>
+      <stop offset="50%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+    <pattern id="cells" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="58" height="58" x="1" y="1" fill="rgba(255,255,255,0.03)" stroke="rgba(255,100,100,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <!-- Satellite image grid -->
+  <rect x="150" y="60" width="360" height="280" fill="url(#cells)" stroke="rgba(255,100,100,0.15)" stroke-width="1"/>
+  <!-- Random terrain cells with varied fill -->
+  <rect x="151" y="61" width="58" height="58" fill="rgba(120,60,30,0.25)"/>
+  <rect x="271" y="121" width="58" height="58" fill="rgba(80,120,50,0.2)"/>
+  <rect x="391" y="181" width="58" height="58" fill="rgba(100,80,60,0.3)"/>
+  <rect x="211" y="241" width="58" height="58" fill="rgba(60,40,30,0.25)"/>
+  <rect x="331" y="61" width="58" height="58" fill="rgba(90,70,50,0.2)"/>
+  <rect x="151" y="181" width="58" height="58" fill="rgba(50,80,40,0.2)"/>
+  <rect x="451" y="121" width="58" height="58" fill="rgba(130,70,40,0.25)"/>
+  <!-- Detection bounding box -->
+  <rect x="270" y="160" width="130" height="90" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <!-- Corner markers -->
+  <path d="M270 160 L270 175 M270 160 L285 160" stroke="#ef4444" stroke-width="3"/>
+  <path d="M400 160 L400 175 M400 160 L385 160" stroke="#ef4444" stroke-width="3"/>
+  <path d="M270 250 L270 235 M270 250 L285 250" stroke="#ef4444" stroke-width="3"/>
+  <path d="M400 250 L400 235 M400 250 L385 250" stroke="#ef4444" stroke-width="3"/>
+  <!-- Crosshair center -->
+  <circle cx="335" cy="205" r="6" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="325" y1="205" x2="310" y2="205" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="345" y1="205" x2="360" y2="205" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="335" y1="195" x2="335" y2="180" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="335" y1="215" x2="335" y2="230" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- Confidence label -->
+  <rect x="403" y="162" width="90" height="22" rx="4" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1"/>
+  <text x="448" y="177" text-anchor="middle" font-family="monospace" font-size="11" fill="#ef4444">CONF: 94.7%</text>
+  <!-- Classification panel -->
+  <rect x="540" y="80" width="200" height="240" rx="8" fill="rgba(0,0,0,0.25)" stroke="rgba(255,100,100,0.2)" stroke-width="1"/>
+  <text x="640" y="108" text-anchor="middle" font-family="monospace" font-size="11" fill="rgba(255,100,100,0.6)" letter-spacing="1">CLASSIFICATION</text>
+  <rect x="558" y="120" width="165" height="1" fill="rgba(255,100,100,0.2)"/>
+  <!-- Class labels with bars -->
+  <text x="558" y="145" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.55)">Conflict Zone</text>
+  <rect x="558" y="150" width="148" height="6" rx="3" fill="rgba(239,68,68,0.85)"/>
+  <text x="714" y="158" text-anchor="end" font-family="monospace" font-size="10" fill="rgba(239,68,68,0.8)">94%</text>
+  <text x="558" y="178" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.55)">Civilian</text>
+  <rect x="558" y="183" width="32" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <text x="714" y="191" text-anchor="end" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">4%</text>
+  <text x="558" y="211" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.55)">Unclassified</text>
+  <rect x="558" y="216" width="12" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="714" y="224" text-anchor="end" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.3)">2%</text>
+  <text x="400" y="372" text-anchor="middle" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.28)" letter-spacing="3">WARLENS — CONFLICT ZONE CLASSIFIER</text>
+</svg>
