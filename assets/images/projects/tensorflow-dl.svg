@@ -1,77 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial,sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1c0a00"/>
-      <stop offset="50%" stop-color="#ea580c"/>
-      <stop offset="100%" stop-color="#f97316"/>
-    </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0L0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    </pattern>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0,0 7,2.5 0,5" fill="#555"/>
+    </marker>
   </defs>
-  <rect width="800" height="400" fill="url(#bg)"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
-  <!-- Neural network diagram -->
-  <!-- Input layer (4 nodes) -->
-  <circle cx="130" cy="130" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
-  <circle cx="130" cy="190" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
-  <circle cx="130" cy="250" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
-  <circle cx="130" cy="310" r="16" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
-  <text x="130" y="360" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.5)">Input</text>
-  <!-- Hidden layer 1 (5 nodes) -->
-  <circle cx="270" cy="110" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="270" cy="170" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="270" cy="230" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="270" cy="290" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="270" cy="350" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <text x="270" y="378" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.4)">Dense 256</text>
-  <!-- Hidden layer 2 (5 nodes) -->
-  <circle cx="410" cy="110" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="410" cy="170" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="410" cy="230" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="410" cy="290" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="410" cy="350" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <text x="410" y="378" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.4)">Dense 128</text>
-  <!-- Hidden layer 3 (4 nodes) -->
-  <circle cx="550" cy="130" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="550" cy="195" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="550" cy="260" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <circle cx="550" cy="325" r="16" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
-  <text x="550" y="360" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.4)">Dense 64</text>
-  <!-- Output layer (2 nodes) -->
-  <circle cx="680" cy="185" r="18" fill="rgba(249,115,22,0.18)" stroke="#f97316" stroke-width="2.5"/>
-  <circle cx="680" cy="265" r="18" fill="rgba(249,115,22,0.18)" stroke="#f97316" stroke-width="2.5"/>
-  <text x="680" y="315" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(249,115,22,0.6)">Softmax</text>
-  <!-- Connections (input → h1) -->
-  <line x1="146" y1="130" x2="254" y2="110" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="146" y1="130" x2="254" y2="170" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="146" y1="130" x2="254" y2="230" stroke="rgba(249,115,22,0.08)" stroke-width="1"/>
-  <line x1="146" y1="130" x2="254" y2="290" stroke="rgba(249,115,22,0.08)" stroke-width="1"/>
-  <line x1="146" y1="130" x2="254" y2="350" stroke="rgba(249,115,22,0.06)" stroke-width="1"/>
-  <line x1="146" y1="190" x2="254" y2="110" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="146" y1="190" x2="254" y2="170" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="146" y1="250" x2="254" y2="230" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="146" y1="250" x2="254" y2="290" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="146" y1="310" x2="254" y2="350" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <!-- h1 → h2 (selected) -->
-  <line x1="286" y1="170" x2="394" y2="170" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
-  <line x1="286" y1="230" x2="394" y2="230" stroke="rgba(249,115,22,0.2)" stroke-width="1.5"/>
-  <line x1="286" y1="110" x2="394" y2="110" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="286" y1="290" x2="394" y2="290" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="286" y1="350" x2="394" y2="350" stroke="rgba(249,115,22,0.1)" stroke-width="1"/>
-  <!-- h2 → h3 -->
-  <line x1="426" y1="170" x2="534" y2="195" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
-  <line x1="426" y1="230" x2="534" y2="260" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
-  <line x1="426" y1="110" x2="534" y2="130" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <line x1="426" y1="290" x2="534" y2="325" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
-  <!-- h3 → output -->
-  <line x1="566" y1="130" x2="662" y2="185" stroke="rgba(249,115,22,0.2)" stroke-width="1.5"/>
-  <line x1="566" y1="195" x2="662" y2="185" stroke="rgba(249,115,22,0.25)" stroke-width="2"/>
-  <line x1="566" y1="260" x2="662" y2="265" stroke="rgba(249,115,22,0.25)" stroke-width="2"/>
-  <line x1="566" y1="325" x2="662" y2="265" stroke="rgba(249,115,22,0.2)" stroke-width="1.5"/>
-  <!-- TF label top right -->
-  <rect x="620" y="55" width="145" height="55" rx="8" fill="rgba(0,0,0,0.2)" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
-  <text x="692" y="78" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(249,115,22,0.5)">TensorFlow 2.x</text>
-  <text x="692" y="96" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="rgba(249,115,22,0.8)">GPU Accelerated</text>
-  <text x="400" y="372" text-anchor="middle" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.28)" letter-spacing="3">TENSORFLOW DEEP LEARNING</text>
+  <rect width="800" height="400" fill="#f6f6f6"/>
+  <!-- Training Phase panel (left) -->
+  <rect x="0" y="0" width="395" height="360" fill="#fff4e8"/>
+  <!-- Testing Phase panel (right) -->
+  <rect x="405" y="0" width="395" height="360" fill="#e8f4ff"/>
+  <!-- Dashed orange border for training -->
+  <rect x="8" y="8" width="380" height="344" rx="8" fill="none" stroke="#e07820" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- Dashed blue border for testing -->
+  <rect x="413" y="8" width="380" height="344" rx="8" fill="none" stroke="#2060c0" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- Phase header labels -->
+  <rect x="100" y="16" width="200" height="28" rx="5" fill="#e07820"/>
+  <text x="200" y="35" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Training Phase</text>
+  <rect x="505" y="16" width="200" height="28" rx="5" fill="#2060c0"/>
+  <text x="605" y="35" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Testing Phase</text>
+  <!-- Training: input + data aug -->
+  <rect x="24" y="60" width="150" height="40" rx="5" fill="white" stroke="#e07820" stroke-width="1.5"/>
+  <text x="99" y="79" text-anchor="middle" fill="#e07820" font-size="11" font-weight="bold">Training Data</text>
+  <text x="99" y="94" text-anchor="middle" fill="#777" font-size="9">80% split · augmented</text>
+  <line x1="99" y1="100" x2="99" y2="118" stroke="#e07820" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="24" y="122" width="150" height="40" rx="5" fill="white" stroke="#aaa"/>
+  <text x="99" y="141" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">Data Pipeline</text>
+  <text x="99" y="156" text-anchor="middle" fill="#777" font-size="9">tf.data · prefetch</text>
+  <!-- Training: NN layer tower -->
+  <text x="280" y="60" text-anchor="middle" fill="#e07820" font-size="10" font-weight="bold">Deep Network</text>
+  <rect x="230" y="66" width="14" height="82" rx="2" fill="#e07820" opacity="0.9"/>
+  <rect x="248" y="73" width="14" height="75" rx="2" fill="#e07820" opacity="0.9"/>
+  <rect x="266" y="81" width="14" height="67" rx="2" fill="#f08830" opacity="0.85"/>
+  <rect x="284" y="91" width="14" height="57" rx="2" fill="#f09840" opacity="0.85"/>
+  <rect x="302" y="101" width="14" height="47" rx="2" fill="#f0a850" opacity="0.85"/>
+  <rect x="320" y="113" width="14" height="35" rx="2" fill="#f8b860" opacity="0.85"/>
+  <rect x="338" y="125" width="14" height="23" rx="2" fill="#f8c870" opacity="0.85"/>
+  <text x="289" y="170" text-anchor="middle" fill="#555" font-size="9">Conv · BN · ReLU</text>
+  <!-- Loss curve -->
+  <text x="200" y="205" text-anchor="middle" fill="#e07820" font-size="10" font-weight="bold">Training Loss</text>
+  <polyline points="30,310 60,285 90,265 120,250 150,240 180,232 210,226 240,222 270,218 310,215 350,213 370,212" fill="none" stroke="#e07820" stroke-width="2"/>
+  <polyline points="30,320 60,302 90,285 120,272 150,262 180,255 210,250 240,247 270,244 310,242 350,241 370,241" fill="none" stroke="#e07820" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/>
+  <text x="30" y="330" fill="#888" font-size="8">0</text>
+  <text x="355" y="330" fill="#888" font-size="8">50 epochs</text>
+  <text x="200" y="345" text-anchor="middle" fill="#888" font-size="8">— train  ·  - - val</text>
+  <!-- Testing: input -->
+  <rect x="430" y="60" width="150" height="40" rx="5" fill="white" stroke="#2060c0" stroke-width="1.5"/>
+  <text x="505" y="79" text-anchor="middle" fill="#2060c0" font-size="11" font-weight="bold">Test Data</text>
+  <text x="505" y="94" text-anchor="middle" fill="#777" font-size="9">20% held-out set</text>
+  <line x1="505" y1="100" x2="505" y2="118" stroke="#2060c0" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="430" y="122" width="150" height="40" rx="5" fill="white" stroke="#aaa"/>
+  <text x="505" y="141" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">Frozen Weights</text>
+  <text x="505" y="156" text-anchor="middle" fill="#777" font-size="9">inference mode</text>
+  <!-- Testing: inference tower -->
+  <text x="670" y="60" text-anchor="middle" fill="#2060c0" font-size="10" font-weight="bold">Inference</text>
+  <rect x="624" y="66" width="14" height="82" rx="2" fill="#2060c0" opacity="0.9"/>
+  <rect x="642" y="73" width="14" height="75" rx="2" fill="#2060c0" opacity="0.9"/>
+  <rect x="660" y="81" width="14" height="67" rx="2" fill="#3070d0" opacity="0.85"/>
+  <rect x="678" y="91" width="14" height="57" rx="2" fill="#4080e0" opacity="0.85"/>
+  <rect x="696" y="101" width="14" height="47" rx="2" fill="#5090e8" opacity="0.85"/>
+  <rect x="714" y="113" width="14" height="35" rx="2" fill="#60a0f0" opacity="0.85"/>
+  <rect x="732" y="125" width="14" height="23" rx="2" fill="#70b0f8" opacity="0.85"/>
+  <!-- Evaluation metrics table -->
+  <text x="605" y="205" text-anchor="middle" fill="#2060c0" font-size="10" font-weight="bold">Evaluation Metrics</text>
+  <rect x="430" y="212" width="358" height="20" rx="3" fill="#dce8fc"/>
+  <text x="480" y="226" fill="#2060c0" font-size="9" font-weight="bold">Metric</text>
+  <text x="580" y="226" fill="#2060c0" font-size="9" font-weight="bold">Train</text>
+  <text x="640" y="226" fill="#2060c0" font-size="9" font-weight="bold">Val</text>
+  <text x="700" y="226" fill="#2060c0" font-size="9" font-weight="bold">Test</text>
+  <line x1="430" y1="232" x2="788" y2="232" stroke="#ddd"/>
+  <text x="480" y="246" fill="#555" font-size="9">Accuracy</text>
+  <text x="580" y="246" fill="#555" font-size="9">97.8%</text>
+  <text x="640" y="246" fill="#555" font-size="9">95.4%</text>
+  <text x="700" y="246" fill="#2060c0" font-size="9" font-weight="bold">94.9%</text>
+  <line x1="430" y1="252" x2="788" y2="252" stroke="#eee"/>
+  <text x="480" y="266" fill="#555" font-size="9">Loss</text>
+  <text x="580" y="266" fill="#555" font-size="9">0.071</text>
+  <text x="640" y="266" fill="#555" font-size="9">0.142</text>
+  <text x="700" y="266" fill="#2060c0" font-size="9" font-weight="bold">0.158</text>
+  <line x1="430" y1="272" x2="788" y2="272" stroke="#eee"/>
+  <text x="480" y="286" fill="#555" font-size="9">F1 Score</text>
+  <text x="580" y="286" fill="#555" font-size="9">0.979</text>
+  <text x="640" y="286" fill="#555" font-size="9">0.953</text>
+  <text x="700" y="286" fill="#2060c0" font-size="9" font-weight="bold">0.948</text>
+  <!-- Arrow between phases -->
+  <line x1="395" y1="165" x2="413" y2="165" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="0" y="362" width="800" height="38" fill="#2d3748"/>
+  <text x="400" y="386" text-anchor="middle" fill="#ccc" font-size="11">TensorFlow Deep Learning  ·  TF 2.x · Keras · GPU · tf.data · Conv · BN · BatchNorm</text>
 </svg>
