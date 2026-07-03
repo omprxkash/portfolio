@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0,0 7,2.5 0,5" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" fill="#f6f6f6"/>
+  <rect x="0"   y="0" width="197" height="360" fill="#fff0e8"/>
+  <rect x="201" y="0" width="197" height="360" fill="#e8f4ff"/>
+  <rect x="401" y="0" width="197" height="360" fill="#e8ffe8"/>
+  <rect x="601" y="0" width="199" height="360" fill="#f0e8ff"/>
+  <line x1="199" y1="0" x2="199" y2="360" stroke="#ddd" stroke-width="2"/>
+  <line x1="399" y1="0" x2="399" y2="360" stroke="#ddd" stroke-width="2"/>
+  <line x1="599" y1="0" x2="599" y2="360" stroke="#ddd" stroke-width="2"/>
+  <rect x="7" y="7" width="184" height="30" rx="5" fill="#e05c20"/>
+  <text x="99" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Source Control</text>
+  <rect x="207" y="7" width="184" height="30" rx="5" fill="#2060c0"/>
+  <text x="299" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">CI Pipeline</text>
+  <rect x="407" y="7" width="184" height="30" rx="5" fill="#209040"/>
+  <text x="499" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Docker Build</text>
+  <rect x="607" y="7" width="184" height="30" rx="5" fill="#7020b0"/>
+  <text x="699" y="27" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Deploy</text>
+  <!-- Git log -->
+  <rect x="10" y="55" width="178" height="175" rx="5" fill="white" stroke="#ccc"/>
+  <rect x="10" y="55" width="178" height="20" rx="5" fill="#fff0e0"/>
+  <text x="18" y="70" fill="#e05c20" font-size="9" font-weight="bold">$ git log --oneline</text>
+  <line x1="10" y1="75" x2="188" y2="75" stroke="#f0e0d0"/>
+  <rect x="18" y="81" width="42" height="11" rx="2" fill="#e05c20" opacity="0.2"/>
+  <text x="18" y="91" fill="#e05c20" font-size="8">a3f9c1b</text>
+  <text x="65" y="91" fill="#555" font-size="8">feat: add auth</text>
+  <rect x="18" y="97" width="42" height="11" rx="2" fill="#e05c20" opacity="0.15"/>
+  <text x="18" y="107" fill="#e05c20" font-size="8">8d2e4a0</text>
+  <text x="65" y="107" fill="#555" font-size="8">fix: rate limit</text>
+  <rect x="18" y="113" width="42" height="11" rx="2" fill="#e05c20" opacity="0.1"/>
+  <text x="18" y="123" fill="#e05c20" font-size="8">c9b7f31</text>
+  <text x="65" y="123" fill="#555" font-size="8">refactor: API v2</text>
+  <rect x="18" y="129" width="42" height="11" rx="2" fill="#e05c20" opacity="0.08"/>
+  <text x="18" y="139" fill="#e05c20" font-size="8">1e5a2d8</text>
+  <text x="65" y="139" fill="#555" font-size="8">chore: deps bump</text>
+  <text x="22" y="157" fill="#999" font-size="9">···</text>
+  <text x="99" y="200" text-anchor="middle" fill="#888" font-size="9">GitHub · 3 branches</text>
+  <text x="99" y="214" text-anchor="middle" fill="#888" font-size="9">main · dev · feat/*</text>
+  <!-- CI pipeline checks -->
+  <text x="299" y="58" text-anchor="middle" fill="#2060c0" font-size="10" font-weight="bold">GitHub Actions</text>
+  <rect x="216" y="66" width="170" height="20" rx="4" fill="#e0f0ff" stroke="#2060c0" stroke-width="1"/>
+  <text x="232" y="80" fill="#2060c0" font-size="9">✓</text>
+  <text x="246" y="80" fill="#555" font-size="9">Lint (flake8 · ESLint)</text>
+  <rect x="216" y="90" width="170" height="20" rx="4" fill="#e0f0ff" stroke="#2060c0" stroke-width="1"/>
+  <text x="232" y="104" fill="#2060c0" font-size="9">✓</text>
+  <text x="246" y="104" fill="#555" font-size="9">Unit Tests (pytest · Jest)</text>
+  <rect x="216" y="114" width="170" height="20" rx="4" fill="#e0f0ff" stroke="#2060c0" stroke-width="1"/>
+  <text x="232" y="128" fill="#2060c0" font-size="9">✓</text>
+  <text x="246" y="128" fill="#555" font-size="9">Integration Tests</text>
+  <rect x="216" y="138" width="170" height="20" rx="4" fill="#ffe8e0" stroke="#e05c20" stroke-width="1"/>
+  <text x="232" y="152" fill="#e05c20" font-size="9">▶</text>
+  <text x="246" y="152" fill="#555" font-size="9">Security Scan (Trivy)</text>
+  <text x="299" y="185" text-anchor="middle" fill="#555" font-size="9">Coverage: 87%</text>
+  <rect x="216" y="200" width="170" height="38" rx="5" fill="white" stroke="#2060c0" stroke-width="1.5"/>
+  <text x="301" y="219" text-anchor="middle" fill="#2060c0" font-size="10" font-weight="bold">Build Matrix</text>
+  <text x="301" y="233" text-anchor="middle" fill="#777" font-size="9">Python 3.10/3.11 · Node 18</text>
+  <!-- Docker build layers -->
+  <text x="499" y="58" text-anchor="middle" fill="#209040" font-size="10" font-weight="bold">Dockerfile Layers</text>
+  <rect x="420" y="67" width="155" height="17" rx="2" fill="#209040" opacity="0.85"/>
+  <text x="427" y="79" fill="white" font-size="8">FROM python:3.11-slim</text>
+  <rect x="420" y="87" width="155" height="17" rx="2" fill="#30a050" opacity="0.8"/>
+  <text x="427" y="99" fill="white" font-size="8">WORKDIR /app</text>
+  <rect x="420" y="107" width="155" height="17" rx="2" fill="#40b060" opacity="0.75"/>
+  <text x="427" y="119" fill="white" font-size="8">COPY requirements.txt .</text>
+  <rect x="420" y="127" width="155" height="17" rx="2" fill="#50c070" opacity="0.75"/>
+  <text x="427" y="139" fill="#333" font-size="8">RUN pip install -r req…</text>
+  <rect x="420" y="147" width="155" height="17" rx="2" fill="#60c878" opacity="0.7"/>
+  <text x="427" y="159" fill="#333" font-size="8">COPY . .</text>
+  <rect x="420" y="167" width="155" height="17" rx="2" fill="#70d080" opacity="0.7"/>
+  <text x="427" y="179" fill="#333" font-size="8">CMD ["uvicorn", "main:app"]</text>
+  <text x="499" y="205" text-anchor="middle" fill="#555" font-size="9">Image: 180MB compressed</text>
+  <rect x="420" y="215" width="155" height="35" rx="5" fill="white" stroke="#209040" stroke-width="1.5"/>
+  <text x="498" y="233" text-anchor="middle" fill="#209040" font-size="10" font-weight="bold">Registry Push</text>
+  <text x="498" y="246" text-anchor="middle" fill="#777" font-size="9">GHCR · Docker Hub</text>
+  <!-- Deploy health -->
+  <text x="699" y="62" text-anchor="middle" fill="#7020b0" font-size="10" font-weight="bold">Deployment</text>
+  <rect x="618" y="73" width="148" height="38" rx="5" fill="white" stroke="#7020b0" stroke-width="1.5"/>
+  <text x="692" y="92" text-anchor="middle" fill="#7020b0" font-size="10" font-weight="bold">Kubernetes / EC2</text>
+  <text x="692" y="106" text-anchor="middle" fill="#555" font-size="9">Rolling update</text>
+  <line x1="609" y1="126" x2="789" y2="126" stroke="#eee"/>
+  <text x="699" y="142" text-anchor="middle" fill="#7020b0" font-size="10" font-weight="bold">Health Checks</text>
+  <text x="618" y="162" fill="#209040" font-size="9">✓ /healthz  200 OK</text>
+  <text x="618" y="178" fill="#209040" font-size="9">✓ /readyz   200 OK</text>
+  <text x="618" y="194" fill="#209040" font-size="9">✓ DB conn   alive</text>
+  <line x1="609" y1="210" x2="789" y2="210" stroke="#eee"/>
+  <text x="699" y="228" text-anchor="middle" fill="#2060c0" font-size="10">Uptime: 99.9%</text>
+  <text x="699" y="246" text-anchor="middle" fill="#666" font-size="9">p95 latency: 42ms</text>
+  <line x1="189" y1="145" x2="213" y2="145" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="389" y1="130" x2="414" y2="130" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="589" y1="130" x2="614" y2="110" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="0" y="362" width="800" height="38" fill="#2d3748"/>
+  <text x="400" y="386" text-anchor="middle" fill="#ccc" font-size="11">CI/CD Pipeline  ·  GitHub Actions · Docker · Kubernetes · pytest · FastAPI</text>
+</svg>

@@ -1,0 +1,145 @@
+# Portfolio Upgrade Workspace
+
+This folder is **not a single project**. It is a portfolio of independent GitHub repos owned by Om . Each immediate subfolder is one project. Many projects ship a **research paper (PDF)** alongside the code that describes the original academic intent.
+
+When you are invoked anywhere inside this tree, your job is to **audit and propose upgrades** — never to ship them.
+
+---
+
+## Hard rules (do not violate)
+
+1. **No git writes.** Never run `git commit`, `git push`, `git reset`, `git checkout -b`, `gh pr create`, or anything that mutates a repo's history or remote. You may run `git status`, `git log`, `git diff`, `git remote -v`.
+2. **No file mutations in project folders** unless the user explicitly says "apply the changes for project X". The only file you may freely create is the report file described below.
+3. **No global installs.** Do not run `pip install`, `npm install -g`, etc. Read `requirements.txt` / `package.json` / `pyproject.toml` to understand deps; do not install them.
+4. **Suggest, don't do.** Every recommendation must be written into the report. The user reviews, then asks you to apply.
+
+---
+
+## Workflow when the user says "audit this project" or "audit everything"
+
+### Single project (cwd is one of the project folders)
+
+1. **Understand intent**
+   - List every PDF in the folder. Read each one (use `Read` with a `pages` range — these are research papers, often 5–20 pages). Extract: problem statement, approach, datasets, evaluation metrics, claimed results, future-work section.
+   - If multiple PDFs exist, they are usually iterations (DA1 → DA2 → DA3 are assignment phases at VIT). Read the latest one first; older ones are background.
+
+2. **Map code to paper**
+   - Use the `Explore` subagent (1 call, "medium" breadth) to inventory: entry points, model architectures, training scripts, eval scripts, notebooks, datasets, configs.
+   - Identify divergences: things promised in the paper but missing in the code, and things in the code that go beyond the paper.
+
+3. **Run the quality audit**
+   - **Code quality**: dead code, duplicated logic, missing type hints, notebook-only code that should be modularized, hardcoded paths, secrets in source. Invoke the `simplify` skill on hot files.
+   - **Tests**: is there a `tests/` dir? coverage? Any reproducibility script? If a paper claims a number, is there code that reproduces it?
+   - **CI/CD**: `.github/workflows/`? linting? Even one `ci.yml` running `pytest` + `ruff` is a huge win for an academic repo.
+   - **Dependencies**: pinned? outdated? Use Context7 MCP (`mcp__plugin_context7-plugin_context7__resolve-library-id` then `query-docs`) for the main libraries (PyTorch, TF, sklearn, transformers, etc.) to check for breaking changes / better APIs in current versions. Do NOT guess from training data.
+   - **Security**: invoke the `security-review` skill — academic ML repos commonly leak API keys, dataset URLs with tokens, or have `pickle.load` on untrusted data.
+   - **Repo hygiene**: README quality, LICENSE present, `.gitignore` correct, no committed `__pycache__` / `.ipynb_checkpoints` / large datasets.
+   - **Reproducibility**: random seeds set? environment locked (`environment.yml` / `requirements.txt` with versions)? dataset acquisition documented?
+
+4. **Generate "next level" ideas** (this is the part the user cares about most)
+   - Re-read the paper's *future work* / *limitations* section — those are usually the best upgrade leads.
+   - Use the `sequentialthinking` MCP for the hardest "where could this go next?" question per project. Examples of the kind of upgrade to propose:
+     - Swap a classical model for a current SOTA backbone (cite the actual model name from Context7-fetched docs, not from memory).
+     - Convert notebook-only code into a package + CLI + Docker image.
+     - Add an evaluation harness that runs on a held-out set and prints a table — turns the repo from "homework" into "portfolio".
+     - Wrap the model in a small FastAPI / Gradio demo so the repo has a live artifact.
+     - If a paper references a dataset, check whether a newer/larger one exists (Context7 / WebFetch).
+
+5. **Cross-pollinate**
+   - Before finalizing, check `_PORTFOLIO_OVERVIEW.md` at the repo-root (`D:\Work\Github Repo\_PORTFOLIO_OVERVIEW.md`). If techniques from another project apply here, call them out by name (e.g. "the BERT fine-tuning loop from `named-entity-recognition-nlp` could replace the bag-of-words baseline here").
+
+6. **Write the report**
+   - Path: `<project-folder>\_UPGRADE_REPORT.md` (the leading underscore keeps it at the top of file listings and makes it easy to `.gitignore`).
+   - Template below. Be ruthlessly concrete — every suggestion must name a file + line range and a specific change. No vague "consider adding tests."
+
+### All projects (cwd is `D:\Work\Github Repo\` itself)
+
+1. Enumerate immediate subfolders. Skip anything starting with `.` or `_`.
+2. For each project, run the single-project workflow above. Parallelize where independent (multiple `Explore` agents in one message — but cap at 3 in flight).
+3. After all per-project reports exist, write/update `_PORTFOLIO_OVERVIEW.md` at the root with:
+   - A one-line summary per project (problem → approach → status).
+   - A **cross-cutting opportunities** section: shared infra (a common `eval/` package?), shared datasets, themes (most projects use sklearn → a portfolio-wide upgrade to a unified PyTorch Lightning template could be one big win).
+   - A **priority ranking**: which 3 projects, if upgraded, would most improve the portfolio's perceived quality for a recruiter / grad-school reviewer.
+
+---
+
+## Report template (`_UPGRADE_REPORT.md`)
+
+```markdown
+# Upgrade Report — <project-name>
+
+_Generated: <YYYY-MM-DD>_
+
+## 1. What this project is (from the paper)
+- **Problem**: …
+- **Approach**: …
+- **Dataset**: …
+- **Reported result**: …
+- **Paper's own future-work**: …
+
+## 2. Current state of the code
+- Entry points: `path/to/file.py`
+- Model: `path/to/model.py:42-88`
+- Tests: present? coverage?
+- CI: yes / no
+- Last commit: <date> (from `git log -1`)
+
+## 3. Divergences (paper vs. code)
+- …
+
+## 4. Quality findings (each item: file:line + concrete fix)
+- [ ] **Code quality**: …
+- [ ] **Tests**: …
+- [ ] **CI/CD**: …
+- [ ] **Deps**: … (version checked via Context7 on <date>)
+- [ ] **Security**: …
+- [ ] **Hygiene**: …
+- [ ] **Reproducibility**: …
+
+## 5. "Next level" upgrade ideas (ranked)
+1. **<headline>** — why it matters, what to change, rough effort (S/M/L).
+2. …
+
+## 6. Cross-pollination
+- Techniques from `<other-project>` that apply here: …
+
+## 7. If the user says "do it", here is the patch plan
+- Branch name: `upgrade/<short-slug>`
+- Files to touch: …
+- Order of commits: …
+```
+
+---
+
+## Tools you should reach for
+
+| Situation | Tool |
+|---|---|
+| Need to read a PDF research paper | `Read` with `pages` range |
+| Need to inventory a project's code | `Explore` subagent, 1 call, "medium" breadth |
+| Need current library docs (PyTorch, TF, transformers, sklearn, FastAPI, etc.) | `mcp__plugin_context7-plugin_context7__resolve-library-id` then `query-docs` — **always prefer this over training-data recall** |
+| Hard "where could this go next?" reasoning | `mcp__sequential-thinking__sequentialthinking` |
+| Reviewing a hunk of code for smells | `simplify` skill |
+| Checking for leaked secrets / unsafe deserialization | `security-review` skill |
+| Generating a polished review of an existing PR | `code-review` skill |
+| Looking up something on the web (newer dataset, SOTA leaderboard) | `WebFetch` / `WebSearch` |
+
+Do not use the Figma / Gmail / Calendar / Drive / Jira MCPs here — these are research code repos, not design or ops work.
+
+---
+
+## Tone of the recommendations
+
+- Treat the user as a strong CS undergrad/early-career engineer with deep ML breadth — skip the basics, go straight to substantive upgrades.
+- Prefer one excellent suggestion over five generic ones.
+- When you cite a SOTA model, library version, or dataset, the citation must come from a tool call made *this session* (Context7 or WebFetch), not from memory.
+- If a project is genuinely already in good shape, say so plainly and recommend "archive / freeze" rather than inventing busywork.
+
+
+
+what would be the best idea to get a prompt or a Claude.md file which exists on the internet and is specifically used to improve the project and check all of the check boxes and the rules?
+- existing projects improvement
+- pushing it to the github
+- existing data files and folders arrangement
+- scraping out and reading my research papers
+Every single project is in my github. I just want a prompt where it can look through each and every one of them and tell me if it can improve it in any way or can give me an idea to upgrade the project to the next level. How do I convey it all in a prompt or a Claude.md file so the plot code extension can understand and give me an idea for the target result? It can still use all of my plugins, MCP skills, UI designs and everything. See if I implemented all of those in there. Just give me that.
