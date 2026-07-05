@@ -83,7 +83,7 @@
           </li>
           <li class="social-item">
             <a href="https://omprakash.github.io" class="social-link" target="_blank" rel="noopener" aria-label="Blog">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="newspaper-outline"></ion-icon>
             </a>
           </li>
         </ul>
@@ -181,8 +181,12 @@
 
       <!-- ============ RESUME ============ -->
       <article class="resume" data-page="resume">
-        <header>
+        <header class="resume-header">
           <h2 class="h2 article-title">Resume</h2>
+          <a href="assets/resume.pdf" class="resume-btn" target="_blank" rel="noopener" title="Download PDF resume">
+            <ion-icon name="cloud-download-outline"></ion-icon>
+            <span>Download CV</span>
+          </a>
         </header>
 
         <!-- Experience -->
@@ -209,41 +213,50 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Co-Founder · CosmosAId</h4>
               <span>Jun 2025 — Present · Chennai</span>
-              <p class="timeline-text">
-                Shipping a B2B student networking and collaboration platform powered by a proprietary neural recommendation engine.
-              </p>
+              <ul class="timeline-text">
+                <li>Co-founded a B2B student networking platform with a proprietary neural recommendation engine for peer and project matching</li>
+                <li>Architected the full-stack SaaS platform: FastAPI backend, React frontend, PostgreSQL + Redis, deployed on AWS</li>
+                <li>Designed and iterated on the recommendation model pipeline — embedding-based user profiles, FAISS indexing, real-time inference</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Software Engineer · PB Tech Services</h4>
               <span>Mar 2025 — Jul 2025 · Bengaluru</span>
-              <p class="timeline-text">
-                End-to-end automation transforming manual workflows into scalable data-driven systems, leveraging LLMs, computer vision, and RAG architectures.
-              </p>
+              <ul class="timeline-text">
+                <li>Automated end-to-end enterprise data pipelines using LLMs and computer vision, replacing manual document workflows</li>
+                <li>Built RAG-based document extraction pipelines ingesting 50,000+ PDFs into a searchable vector store</li>
+                <li>Delivered real-time Power BI dashboards backed by a PostgreSQL + Redis data layer for executive reporting</li>
+                <li>Scaled a NoSQL API to handle high-throughput transactional data with sub-100ms query performance</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Machine Learning Intern · SmartBridge</h4>
               <span>Jun 2024 — Aug 2024</span>
-              <p class="timeline-text">
-                Fine-tuned model hyperparameters and applied OpenLLM practices to cut inference time by 50%.
-              </p>
+              <ul class="timeline-text">
+                <li>Developed VAE-based texture and heightfield generation models for Samsung PRISM's real-time image generation research</li>
+                <li>Applied OpenLLM practices to fine-tune LLM hyperparameters, cutting inference latency by 50%</li>
+                <li>Earned Samsung PRISM Excellence Certificate for multimodal generation research contributions</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Data Science Member · Google Developer Student Clubs</h4>
               <span>Oct 2022 — Sep 2023 · Chennai</span>
-              <p class="timeline-text">
-                Coordinated national hackathons (House of Developers, GDSC WOW) and led a Computer Vision workshop with 100+ attendees.
-              </p>
+              <ul class="timeline-text">
+                <li>Organized House of Developers and GDSC WOW national hackathons, reviewing 100+ student project submissions</li>
+                <li>Led a Computer Vision workshop attended by 100+ participants, covering CNNs, transfer learning, and deployment</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Open Source Developer · IEEE RAS, VIT Chennai</h4>
               <span>Dec 2022 — Feb 2023 · Chennai</span>
-              <p class="timeline-text">
-                Built software and frameworks for IEEE-organized events. Active participant in institutional hackathons.
-              </p>
+              <ul class="timeline-text">
+                <li>Shipped open-source tools and frameworks for IEEE-RAS-organized institutional events and competitions</li>
+                <li>Won 1st Place at the PASCADE Hackathon (Nov 2024), competing against 40+ teams</li>
+              </ul>
             </li>
           </ol>
         </section>
@@ -286,37 +299,37 @@
             <div class="skill-group">
               <h4 class="h4">Languages</h4>
               <ul class="skill-tags">
-                <li>Python</li><li>Java</li><li>C</li><li>C++</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>HTML</li><li>PHP</li>
+                <li>Python</li><li>SQL</li><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>Bash</li>
               </ul>
             </div>
             <div class="skill-group">
-              <h4 class="h4">AI / ML</h4>
+              <h4 class="h4">AI / LLM</h4>
               <ul class="skill-tags">
-                <li>TensorFlow</li><li>PyTorch</li><li>scikit-learn</li><li>Keras</li><li>NumPy</li><li>pandas</li><li>Matplotlib</li>
+                <li>Agentic AI</li><li>RAG</li><li>Graph RAG</li><li>Prompt Engineering</li><li>OpenAI API</li><li>Anthropic API</li><li>Hugging Face</li><li>FAISS</li><li>Pinecone</li><li>pgvector</li>
               </ul>
             </div>
             <div class="skill-group">
-              <h4 class="h4">NLP / LLM</h4>
+              <h4 class="h4">Frameworks &amp; Libraries</h4>
               <ul class="skill-tags">
-                <li>OpenAI API</li><li>Hugging Face</li><li>LangChain</li><li>RAG</li><li>OCR / Tesseract</li><li>NLTK</li><li>spaCy</li>
+                <li>LangChain</li><li>LangGraph</li><li>FastAPI</li><li>Flask</li><li>PyTorch</li><li>TensorFlow</li><li>Transformers</li><li>Pydantic</li><li>React</li>
               </ul>
             </div>
             <div class="skill-group">
-              <h4 class="h4">Cloud &amp; DevOps</h4>
+              <h4 class="h4">Cloud &amp; Infrastructure</h4>
               <ul class="skill-tags">
-                <li>AWS</li><li>Google Cloud</li><li>Azure</li><li>Docker</li><li>Git</li><li>CI/CD</li><li>Node.js</li>
+                <li>AWS (ECS · Lambda · S3 · SQS)</li><li>Terraform</li><li>Docker</li><li>Celery</li><li>GitHub Actions</li><li>Spring Boot</li>
               </ul>
             </div>
             <div class="skill-group">
               <h4 class="h4">Databases</h4>
               <ul class="skill-tags">
-                <li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>Neo4j</li><li>Firebase</li>
+                <li>PostgreSQL</li><li>Redis</li><li>MongoDB</li><li>MySQL</li><li>Neo4j</li>
               </ul>
             </div>
             <div class="skill-group">
-              <h4 class="h4">Frameworks &amp; Tools</h4>
+              <h4 class="h4">Tools</h4>
               <ul class="skill-tags">
-                <li>React.js</li><li>Flask</li><li>Flutter</li><li>VS Code</li><li>Jupyter</li><li>Power BI</li><li>Tableau</li>
+                <li>Cursor</li><li>Claude Code</li><li>Jupyter</li><li>Power BI</li><li>VS Code</li><li>Postman</li>
               </ul>
             </div>
           </div>
@@ -499,25 +512,25 @@
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="web / app">
-              <a href="https://github.com/omprxkash/cicd_pipeline_devops" target="_blank" rel="noopener">
+            <li class="project-item active" data-filter-item data-category="ai / ml">
+              <a href="https://github.com/omprxkash/campus-insight-lms" target="_blank" rel="noopener">
                 <figure class="project-img">
-                  <img src="assets/images/projects/cicd-pipeline.svg" alt="CI/CD Pipeline DevOps" loading="lazy">
+                  <img src="assets/images/projects/campus-insight-lms.svg" alt="Campus Insight LMS — multi-tenant LMS with LangGraph agents and RAG" loading="lazy">
                   <div class="project-item-icon-box"><ion-icon name="open-outline"></ion-icon></div>
                 </figure>
-                <h3 class="project-title">CI/CD Pipeline — DevOps</h3>
-                <p class="project-category">Docker · GitHub Actions · Automation</p>
+                <h3 class="project-title">Campus Insight LMS</h3>
+                <p class="project-category">LangGraph · RAG · AWS · Terraform</p>
               </a>
             </li>
 
             <li class="project-item active" data-filter-item data-category="ai / ml">
-              <a href="https://github.com/omprxkash/tensorflow-deep-learning" target="_blank" rel="noopener">
+              <a href="https://github.com/omprxkash/autonomous-multimodel-agent" target="_blank" rel="noopener">
                 <figure class="project-img">
-                  <img src="assets/images/projects/tensorflow-dl.svg" alt="TensorFlow Deep Learning" loading="lazy">
+                  <img src="assets/images/projects/autonomous-multimodel.svg" alt="Autonomous Multi-Modal Agent Evaluation Harness" loading="lazy">
                   <div class="project-item-icon-box"><ion-icon name="open-outline"></ion-icon></div>
                 </figure>
-                <h3 class="project-title">TensorFlow Deep Learning</h3>
-                <p class="project-category">TF · Jupyter · Model Experiments</p>
+                <h3 class="project-title">Autonomous Multi-Modal Agent</h3>
+                <p class="project-category">Agentic AI · LLM · Evaluation · Multimodal</p>
               </a>
             </li>
 
@@ -612,6 +625,17 @@
                 </div>
                 <ion-icon name="arrow-forward-outline" class="contact-social-arrow"></ion-icon>
               </a>
+            </li>
+            <li>
+              <div class="contact-social-item no-link">
+                <div class="contact-social-icon" style="--sc-color:#6b7280;">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+                <div class="contact-social-info">
+                  <span class="contact-social-name">Location</span>
+                  <span class="contact-social-handle">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
