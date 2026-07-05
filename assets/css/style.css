@@ -236,11 +236,7 @@ main {
   background: var(--onyx);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
-  width: fit-content;
-  max-width: 100%;
-  white-space: normal;
-  text-align: center;
-  line-height: 1.4;
+  width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
 }
@@ -611,6 +607,17 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+ul.timeline-text {
+  padding-left: 18px;
+}
+
+ul.timeline-text li {
+  list-style: disc;
+  font-size: var(--fs-7);
+  line-height: 1.6;
+  margin-bottom: 4px;
 }
 
 /* skills */
