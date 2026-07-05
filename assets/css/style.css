@@ -314,6 +314,13 @@ main {
   font-size: var(--fs-7);
 }
 
+.contact-info .contact-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
 .contact-info address { font-style: normal; }
 
 .social-list {
