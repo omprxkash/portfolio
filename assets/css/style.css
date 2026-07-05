@@ -551,15 +551,10 @@ main {
 
 .article-title { margin-bottom: 30px; }
 
-.resume-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.resume-download {
+  margin-top: -18px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
-  gap: 12px;
 }
-.resume-header .article-title { margin-bottom: 0; }
 
 .resume-btn {
   display: inline-flex;

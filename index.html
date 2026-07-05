@@ -54,13 +54,6 @@
             </div>
           </li>
 
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Chennai, Tamil Nadu, India</address>
-            </div>
-          </li>
         </ul>
 
         <div class="separator"></div>
@@ -181,13 +174,16 @@
 
       <!-- ============ RESUME ============ -->
       <article class="resume" data-page="resume">
-        <header class="resume-header">
+        <header>
           <h2 class="h2 article-title">Resume</h2>
-          <a href="https://www.linkedin.com/in/omprxkash/" class="resume-btn" target="_blank" rel="noopener" title="View resume on LinkedIn">
-            <ion-icon name="open-outline"></ion-icon>
-            <span>View CV</span>
-          </a>
         </header>
+
+        <div class="resume-download">
+          <a href="assets/resume.pdf" class="resume-btn" target="_blank" rel="noopener">
+            <ion-icon name="cloud-download-outline"></ion-icon>
+            <span>Download CV</span>
+          </a>
+        </div>
 
         <!-- Experience -->
         <section class="timeline">
@@ -532,17 +528,6 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="ai / ml">
-              <a href="https://github.com/omprxkash/virtual-learning-environment" target="_blank" rel="noopener">
-                <figure class="project-img">
-                  <img src="assets/images/projects/campus-insight-lms.svg" alt="Campus Insight LMS — multi-tenant LMS with LangGraph agents and RAG" loading="lazy">
-                  <div class="project-item-icon-box"><ion-icon name="open-outline"></ion-icon></div>
-                </figure>
-                <h3 class="project-title">Campus Insight LMS</h3>
-                <p class="project-category">LangGraph · RAG · AWS · Terraform</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="ai / ml">
               <a href="https://github.com/omprxkash/texture-model-stylization" target="_blank" rel="noopener">
                 <figure class="project-img">
                   <img src="assets/images/projects/texture-stylization.svg" alt="Texture Model Stylization — generative AI for style transfer and texture generation" loading="lazy">
@@ -699,6 +684,17 @@
                 </div>
                 <ion-icon name="arrow-forward-outline" class="contact-social-arrow"></ion-icon>
               </a>
+            </li>
+            <li>
+              <div class="contact-social-item no-link">
+                <div class="contact-social-icon" style="--sc-color:#6b7280;">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+                <div class="contact-social-info">
+                  <span class="contact-social-name">Location</span>
+                  <span class="contact-social-handle">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
