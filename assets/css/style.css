@@ -1319,7 +1319,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contact-info :is(.contact-link) {
     white-space: normal;
     overflow-wrap: break-word;
-    word-break: break-all;
   }
 
   .contact-info :is(.contact-link, time, address) {
