@@ -200,7 +200,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 720px; }
+.sidebar.active { max-height: 650px; }
 
 .sidebar-info {
   position: relative;
