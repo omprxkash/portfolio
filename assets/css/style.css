@@ -521,20 +521,16 @@ main {
 .affil-card:hover { transform: translateX(4px); }
 
 .affil-logo {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 10px;
-  background: var(--logo-color, #555);
-  color: #fff;
-  font-size: 9px;
-  font-weight: var(--fw-600);
-  letter-spacing: 0.03em;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--logo-color, #555) 40%, transparent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
 }
 
 .affil-logo img {
@@ -542,9 +538,7 @@ main {
   height: 100%;
   object-fit: contain;
   display: block;
-  border-radius: 8px;
   padding: 5px;
-  background: rgba(255,255,255,0.92);
 }
 
 .affil-info {
@@ -1188,6 +1182,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .form-btn ion-icon { font-size: 18px; }
+
+  .affil-grid { grid-template-columns: 1fr 1fr; }
+
 }
 
 /*-----------------------------------*\
@@ -1234,7 +1231,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
-  .affil-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /*-----------------------------------*\
